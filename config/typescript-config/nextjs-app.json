@@ -8,10 +8,8 @@
     "declarationMap": false,
     "incremental": true,
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
+    "moduleResolution": "Bundler",
     "noEmit": true,
-    "resolveJsonModule": true,
-    "target": "es5"
+    "plugins": [{ "name": "next" }]
   }
 }
