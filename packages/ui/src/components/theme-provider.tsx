@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "dark" | "light" | "system";
@@ -5,7 +7,6 @@ type Theme = "dark" | "light" | "system";
 interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: Theme;
-  storageKey?: string;
 }
 
 interface ThemeProviderState {
@@ -23,13 +24,9 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 export function ThemeProvider({
   children,
   defaultTheme = "system",
-  storageKey = "theme",
   ...props
 }: ThemeProviderProps): JSX.Element {
-  const [theme, setTheme] = useState<Theme>(
-    (): Theme =>
-      (localStorage.getItem(storageKey) as Theme | null) || defaultTheme
-  );
+  const [theme, setTheme] = useState<Theme>((): Theme => defaultTheme);
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -52,7 +49,6 @@ export function ThemeProvider({
   const value = {
     theme,
     setTheme: (newTheme: Theme): void => {
-      localStorage.setItem(storageKey, newTheme);
       setTheme(newTheme);
     },
   };
@@ -64,7 +60,7 @@ export function ThemeProvider({
   );
 }
 
-export const useTheme = (): ThemeProviderState => {
+export function useTheme(): ThemeProviderState {
   const context = useContext(ThemeProviderContext);
 
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- it could actually be undefined
@@ -72,4 +68,4 @@ export const useTheme = (): ThemeProviderState => {
     throw new Error("useTheme must be used within a ThemeProvider");
 
   return context;
-};
+}

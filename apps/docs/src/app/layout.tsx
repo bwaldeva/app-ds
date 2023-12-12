@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-
+import { ThemeProvider } from "@app-ds/ui/components/client";
 import "@app-ds/ui/index.css";
-import "./index.css";
+import "./styles.css";
 
 export const metadata: Metadata = {
   title: "Create Turborepo",
@@ -15,7 +15,9 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <ThemeProvider defaultTheme="dark">
+        <body>{children}</body>
+      </ThemeProvider>
     </html>
   );
 }

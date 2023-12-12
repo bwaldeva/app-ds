@@ -1,3 +1,10 @@
+import { Navbar } from "@app-ds/ui/components/server";
+
 export default function Page(): JSX.Element {
-  return <div>Hello, World!</div>;
+  return (
+    <>
+      <Navbar />
+      <div>Hello, World!</div>
+    </>
+  );
 }
