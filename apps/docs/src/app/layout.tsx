@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@app-ds/ui/components/client";
+import { ThemeProvider } from "@app-ds/ui";
 import "@app-ds/ui/index.css";
 import "./styles.css";
 

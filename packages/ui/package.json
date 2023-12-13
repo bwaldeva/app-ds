@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "sideEffects": false,
   "exports": {
-    "./components/client": "./dist/components/client.js",
-    "./components/server": "./dist/components/server.js",
+    ".": "./dist/index.js",
+    "./client": "./dist/components/client.js",
+    "./server": "./dist/components/server.js",
     "./index.css": "./dist/index.css"
   },
   "license": "MIT",

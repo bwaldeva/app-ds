@@ -1,4 +1,4 @@
-import { Navbar } from "@app-ds/ui/components/server";
+import { Navbar } from "@app-ds/ui";
 
 export default function Page(): JSX.Element {
   return (
