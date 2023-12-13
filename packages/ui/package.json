@@ -9,8 +9,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p tsconfig.json && tsc-alias && tailwindcss -i ./src/styles/styles.css -o dist/index.css && cp -r ./assets/fonts dist",
-    "dev": "cp -r ./assets/fonts dist && (concurrently \"tsc -p tsconfig.json -w\" \"tsc-alias -w\" \"tailwindcss --watch -i ./src/styles/styles.css -o ./dist/index.css\")",
+    "build": "tsc -p tsconfig.json && tsc-alias && tailwindcss -i ./src/styles/styles.css -o dist/index.css && copy-and-watch -r ./assets/fonts/**/* ./dist/fonts/",
+    "dev": " concurrently \"tsc -p tsconfig.json -w\" \"tsc-alias -w\" \"tailwindcss --watch -i ./src/styles/styles.css -o ./dist/index.css\" \"copy-and-watch --watch -r ./assets/fonts/**/* ./dist/fonts/\"",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
@@ -45,6 +45,7 @@
     "@types/react-dom": "^18.2.17",
     "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.2",
+    "copy-and-watch": "^0.1.6",
     "eslint": "^8.55.0",
     "postcss": "^8.4.32",
     "react": "^18.2.0",
