@@ -9,7 +9,6 @@
   },
   "include": [
     "./src/index.ts",
-    "./tailwind.config.ts",
     "./src/components/client.ts",
     "./src/components/server.ts"
   ],
