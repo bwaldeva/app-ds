@@ -38,13 +38,7 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: [
-    "node_modules/",
-    "dist/",
-    ".storybook/",
-    ".eslintrc.js",
-    "**/*.css",
-  ],
+  ignorePatterns: ["node_modules/", "dist/", ".storybook/", "**/*.css"],
   // add rules configurations here
   rules: {
     "import/no-default-export": "off",

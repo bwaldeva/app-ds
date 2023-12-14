@@ -1,2 +1,12 @@
-export { ThemeProvider, useTheme } from "@/components/theme-provider";
-export { ThemeToggle } from "@/components/theme-toggle";
+export * from "@/components/theme-provider";
+export * from "@/components/theme-toggle";
+export * from "@/components/ui/checkbox";
+export * from "@/components/ui/command";
+export * from "@/components/ui/dialog";
+export * from "@/components/ui/dropdown-menu";
+export * from "@/components/ui/label";
+export * from "@/components/ui/popover";
+export * from "@/components/ui/radio-group";
+export * from "@/components/ui/select";
+export * from "@/components/ui/slider";
+export * from "@/components/ui/switch";

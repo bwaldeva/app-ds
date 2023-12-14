@@ -37,13 +37,7 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: [
-    "node_modules/",
-    "dist/",
-    ".next/",
-    ".eslintrc.js",
-    "**/*.css",
-  ],
+  ignorePatterns: ["node_modules/", "dist/", ".next/", "**/*.css"],
   // add rules configurations here
   rules: {
     "import/no-default-export": "off",
