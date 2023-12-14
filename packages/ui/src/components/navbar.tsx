@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { MaterialSymbol } from "@/components/ui/material-symbols";
 import { Button } from "@/components/ui/button";
 
 export interface NavbarProps extends React.ComponentPropsWithRef<"div"> {
@@ -20,7 +20,7 @@ const Navbar = React.forwardRef<HTMLDivElement, NavbarProps>(
           <div className="flex h-full items-center">
             <div className="flex items-center">
               <Button size="icon" variant="outline">
-                <HamburgerMenuIcon />
+                <MaterialSymbol symbol="menu" />
               </Button>
             </div>
             {brand ? <div className="flex items-center">{brand}</div> : null}
