@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import * as tailwindAnimate from "tailwindcss-animate";
 import sharedConfig from "@repo/tailwind-config";
 
 const config: Pick<
@@ -77,7 +78,7 @@ const config: Pick<
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindAnimate],
 };
 
 export default config;
