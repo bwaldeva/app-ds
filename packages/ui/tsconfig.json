@@ -7,10 +7,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "./src/index.ts",
-    "./src/components/client.ts",
-    "./src/components/server.ts"
-  ],
+  "include": ["./src/index.ts"],
   "exclude": ["dist", "build", "node_modules"]
 }

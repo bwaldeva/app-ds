@@ -141,7 +141,7 @@ importers:
     devDependencies:
       '@vercel/style-guide':
         specifier: ^5.1.0
-        version: 5.1.0(eslint@8.55.0)(prettier@3.1.1)(typescript@5.3.3)
+        version: 5.1.0(eslint@8.55.0)(typescript@5.3.3)
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -5061,7 +5061,7 @@ packages:
   /@types/node-fetch@2.6.9:
     resolution: {integrity: sha512-bQVlnMLFJ2d35DkPNjEPmd9ueO/rh5EiaZt2bhqiSarPjZIuIV6bPQVqcrEyvNo+AfTrRGVazle1tl597w3gfA==}
     dependencies:
-      '@types/node': 18.19.3
+      '@types/node': 20.10.4
       form-data: 4.0.0
     dev: true
 
@@ -5373,7 +5373,7 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@vercel/style-guide@5.1.0(eslint@8.55.0)(prettier@3.1.1)(typescript@5.3.3):
+  /@vercel/style-guide@5.1.0(eslint@8.55.0)(typescript@5.3.3):
     resolution: {integrity: sha512-L9lWYePIycm7vIOjDLj+mmMdmmPkW3/brHjgq+nJdvMOrL7Hdk/19w8X583HYSk0vWsq494o5Qkh6x5+uW7ljg==}
     engines: {node: '>=16'}
     peerDependencies:
@@ -5410,8 +5410,7 @@ packages:
       eslint-plugin-testing-library: 6.2.0(eslint@8.55.0)(typescript@5.3.3)
       eslint-plugin-tsdoc: 0.2.17
       eslint-plugin-unicorn: 48.0.1(eslint@8.55.0)
-      prettier: 3.1.1
-      prettier-plugin-packagejson: 2.4.7(prettier@3.1.1)
+      prettier-plugin-packagejson: 2.4.7
       typescript: 5.3.3
     transitivePeerDependencies:
       - eslint-import-resolver-node
@@ -10563,7 +10562,7 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-packagejson@2.4.7(prettier@3.1.1):
+  /prettier-plugin-packagejson@2.4.7:
     resolution: {integrity: sha512-/n1HGcBbuJyTlD3tb2/tW1mT5WIR6FCo+bAijHF6pNoSBf8YoxoskawjSY2ku9/8d6mdzci7oMchziI7CYEWYg==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -10571,7 +10570,6 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 3.1.1
       sort-package-json: 2.6.0
       synckit: 0.8.6
     dev: true

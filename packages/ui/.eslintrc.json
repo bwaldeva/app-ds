@@ -1,0 +1,4 @@
+{
+  "extends": ["@repo/eslint-config/react-library.cjs"],
+  "ignorePatterns": ["tailwind.config.ts"]
+}
