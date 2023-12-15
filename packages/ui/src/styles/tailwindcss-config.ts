@@ -9,7 +9,7 @@ const config: Pick<
 > = {
   presets: [sharedConfig],
   darkMode: ["class"],
-  content: ["./components/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     container: {
       center: true,

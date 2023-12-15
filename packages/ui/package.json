@@ -10,8 +10,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p tsconfig.json && tsc-alias && tailwindcss -i ./src/styles/styles.css -o dist/index.css && copy-and-watch -r ./assets/fonts/**/* ./dist/fonts/",
-    "dev": " concurrently \"tsc -p tsconfig.json -w\" \"tsc-alias -w\" \"tailwindcss --watch -i ./src/styles/styles.css -o ./dist/index.css\" \"copy-and-watch --watch -r ./assets/fonts/**/* ./dist/fonts/\"",
+    "build": "tsc -p tsconfig.json && tsc-alias && tailwindcss -c ./src/styles/tailwindcss-config.ts -i ./src/styles/tailwind.css -o dist/index.css && copy-and-watch -r ./assets/fonts/**/* ./dist/fonts/",
+    "dev": " concurrently \"tsc -p tsconfig.json -w\" \"tsc-alias -w\" \"tailwindcss --watch -c ./src/styles/tailwindcss-config.ts -i ./src/styles/tailwind.css -o ./dist/index.css\" \"copy-and-watch --watch -r ./assets/fonts/**/* ./dist/fonts/\"",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
