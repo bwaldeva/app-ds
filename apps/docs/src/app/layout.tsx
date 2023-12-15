@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "@app-ds/ui";
+import { ThemeProvider, FontProvider } from "@app-ds/ui";
 import "@app-ds/ui/index.css";
 import "./styles.css";
 
@@ -16,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeProvider defaultTheme="dark">
-        <body>{children}</body>
+        <FontProvider>
+          <body>{children}</body>
+        </FontProvider>
       </ThemeProvider>
     </html>
   );

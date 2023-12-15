@@ -141,7 +141,7 @@ importers:
     devDependencies:
       '@vercel/style-guide':
         specifier: ^5.1.0
-        version: 5.1.0(eslint@8.55.0)(typescript@5.3.3)
+        version: 5.1.0(eslint@8.55.0)(prettier@3.1.1)(typescript@5.3.3)
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -177,6 +177,12 @@ importers:
 
   packages/ui:
     dependencies:
+      '@fontsource-variable/inter':
+        specifier: ^5.0.16
+        version: 5.0.16
+      '@fontsource-variable/jetbrains-mono':
+        specifier: ^5.0.19
+        version: 5.0.19
       '@radix-ui/react-checkbox':
         specifier: ^1.0.4
         version: 1.0.4(@types/react-dom@18.2.17)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
@@ -2446,6 +2452,14 @@ packages:
 
   /@floating-ui/utils@0.1.6:
     resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==}
+
+  /@fontsource-variable/inter@5.0.16:
+    resolution: {integrity: sha512-k+BUNqksTL+AN+o+OV7ILeiE9B5M5X+/jA7LWvCwjbV9ovXTqZyKRhA/x7uYv/ml8WQ0XNLBM7cRFIx4jW0/hg==}
+    dev: false
+
+  /@fontsource-variable/jetbrains-mono@5.0.19:
+    resolution: {integrity: sha512-7PTG1Kp3B/FgoNVPT8da4humj5JxQYxTtO08ZPS2IfanS37Yb/WShbgScnG/iupuFwiRnHVkIuC/2czxItxmyg==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.13:
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
@@ -5373,7 +5387,7 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@vercel/style-guide@5.1.0(eslint@8.55.0)(typescript@5.3.3):
+  /@vercel/style-guide@5.1.0(eslint@8.55.0)(prettier@3.1.1)(typescript@5.3.3):
     resolution: {integrity: sha512-L9lWYePIycm7vIOjDLj+mmMdmmPkW3/brHjgq+nJdvMOrL7Hdk/19w8X583HYSk0vWsq494o5Qkh6x5+uW7ljg==}
     engines: {node: '>=16'}
     peerDependencies:
@@ -5410,7 +5424,8 @@ packages:
       eslint-plugin-testing-library: 6.2.0(eslint@8.55.0)(typescript@5.3.3)
       eslint-plugin-tsdoc: 0.2.17
       eslint-plugin-unicorn: 48.0.1(eslint@8.55.0)
-      prettier-plugin-packagejson: 2.4.7
+      prettier: 3.1.1
+      prettier-plugin-packagejson: 2.4.7(prettier@3.1.1)
       typescript: 5.3.3
     transitivePeerDependencies:
       - eslint-import-resolver-node
@@ -10562,7 +10577,7 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-packagejson@2.4.7:
+  /prettier-plugin-packagejson@2.4.7(prettier@3.1.1):
     resolution: {integrity: sha512-/n1HGcBbuJyTlD3tb2/tW1mT5WIR6FCo+bAijHF6pNoSBf8YoxoskawjSY2ku9/8d6mdzci7oMchziI7CYEWYg==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -10570,6 +10585,7 @@ packages:
       prettier:
         optional: true
     dependencies:
+      prettier: 3.1.1
       sort-package-json: 2.6.0
       synckit: 0.8.6
     dev: true

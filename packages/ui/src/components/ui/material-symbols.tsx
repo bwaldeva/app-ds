@@ -1,7 +1,7 @@
 import * as React from "react";
 import { type MaterialSymbol as MaterialSymbolId } from "material-symbols";
 import { cn } from "@/lib/utils";
-import "material-symbols/index.css";
+import "material-symbols";
 
 export interface MaterialSymbolProps
   extends React.ButtonHTMLAttributes<HTMLSpanElement> {

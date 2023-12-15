@@ -1,3 +1,4 @@
+export * from "@/components/font-provider";
 export * from "@/components/navbar";
 export * from "@/components/ui/button";
 export * from "@/components/ui/card";

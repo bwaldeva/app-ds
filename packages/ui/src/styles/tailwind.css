@@ -2,28 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("./fonts/InterVariable.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("./fonts/InterVariable-Italic.woff2") format("woff2");
-}
-
 @layer base {
   :root {
-    --font-sans: "Inter";
+    --font-sans: "Inter Variable";
+    --font-mono: "JetBrains Mono Variable";
   }
 
   .dark {
-    --font-sans: "Inter";
+    --font-sans: "Inter Variable";
+    --font-mono: "JetBrains Mono Variable";
   }
 }
 
