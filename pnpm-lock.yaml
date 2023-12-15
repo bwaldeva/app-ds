@@ -75,6 +75,12 @@ importers:
       '@app-ds/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@fontsource-variable/inter':
+        specifier: ^5.0.16
+        version: 5.0.16
+      '@fontsource-variable/jetbrains-mono':
+        specifier: ^5.0.19
+        version: 5.0.19
       react:
         specifier: ^18.2.0
         version: 18.2.0

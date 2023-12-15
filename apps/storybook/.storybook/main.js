@@ -1,6 +1,6 @@
-import { dirname, join } from "path";
+const { dirname, join } = require("path");
 
-function getAbsolutePath(value): string {
+function getAbsolutePath(value) {
   return dirname(require.resolve(join(value, "package.json")));
 }
 

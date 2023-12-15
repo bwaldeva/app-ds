@@ -1,10 +1,12 @@
 import { create } from "@storybook/theming/create";
+import "@fontsource-variable/inter";
+import "@fontsource-variable/jetbrains-mono";
 
 export default create({
   base: "dark",
   // Typography
-  fontBase: '"Inter", sans-serif',
-  fontCode: "monospace",
+  fontBase: '"Inter Variable", sans-serif',
+  fontCode: '"JetBrains Mono Variable", monospace',
 
   brandTitle: "Application Design System",
   brandUrl: "https://example.com",
