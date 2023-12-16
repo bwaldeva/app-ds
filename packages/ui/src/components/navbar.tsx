@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 export interface NavbarProps extends React.ComponentPropsWithRef<"div"> {
   brand?: React.ReactNode;
   navigation?: React.ReactNode;
-  menu?: React.ReactNode;
+  toolbar?: React.ReactNode;
 }
 
 const Navbar = React.forwardRef<HTMLDivElement, NavbarProps>(
-  ({ brand, navigation, menu, ...props }, ref) => {
+  ({ brand, navigation, toolbar, children, ...props }, ref) => {
     return (
       <div
         className="sticky z-50 top-0 h-16 px-3 bg-background shadow dark:border"
@@ -27,9 +27,12 @@ const Navbar = React.forwardRef<HTMLDivElement, NavbarProps>(
             {navigation ? (
               <nav className="flex items-center">{navigation}</nav>
             ) : null}
-            {menu ? (
+            {children ? (
+              <div className="flex items-center">{children}</div>
+            ) : null}
+            {toolbar ? (
               <div className="flex ml-auto items-center justify-end">
-                {menu}
+                {toolbar}
               </div>
             ) : null}
           </div>

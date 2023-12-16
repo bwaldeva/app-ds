@@ -14,16 +14,19 @@ export interface MaterialSymbolProps
 }
 
 const MaterialSymbol = React.forwardRef<HTMLSpanElement, MaterialSymbolProps>(
-  ({
-    symbol,
-    className,
-    styling = "outlined",
-    filled,
-    weight,
-    grade,
-    size,
-    ...props
-  }: MaterialSymbolProps) => {
+  (
+    {
+      symbol,
+      className,
+      styling = "outlined",
+      filled,
+      weight,
+      grade,
+      size,
+      ...props
+    },
+    ref
+  ) => {
     let setWeight = weight;
     let setGrade = grade;
     let setSize = size;
@@ -47,6 +50,7 @@ const MaterialSymbol = React.forwardRef<HTMLSpanElement, MaterialSymbolProps>(
     return (
       <span
         className={cn(className, `material-symbols-${styling}`)}
+        ref={ref}
         style={{
           fontVariationSettings: fontVariations,
         }}
