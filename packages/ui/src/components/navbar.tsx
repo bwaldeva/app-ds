@@ -1,5 +1,5 @@
 import * as React from "react";
-import { MaterialSymbol } from "@/components/ui/material-symbols";
+import { MaterialSymbol } from "material-symbols-react";
 import { Button } from "@/components/ui/button";
 
 export interface NavbarProps extends React.ComponentPropsWithRef<"div"> {

@@ -1,5 +1,6 @@
 "use client";
 
+import { MaterialSymbol } from "material-symbols-react";
 import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,7 +9,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { MaterialSymbol } from "@/components/ui/material-symbols";
 
 export function ThemeToggle(): JSX.Element {
   const { setTheme } = useTheme();

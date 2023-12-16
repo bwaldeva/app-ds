@@ -1,6 +1,6 @@
 import * as React from "react";
 import { type MaterialSymbol as MaterialSymbolId } from "material-symbols";
-import { cn } from "@/lib/utils";
+import { clsx } from "clsx";
 import "material-symbols";
 
 export interface MaterialSymbolProps
@@ -49,7 +49,7 @@ const MaterialSymbol = React.forwardRef<HTMLSpanElement, MaterialSymbolProps>(
       .join(",");
     return (
       <span
-        className={cn(className, `material-symbols-${styling}`)}
+        className={clsx(className, `material-symbols-${styling}`)}
         ref={ref}
         style={{
           fontVariationSettings: fontVariations,

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as SelectPrimitive from "@radix-ui/react-select";
-import { MaterialSymbol } from "@/components/ui/material-symbols";
+import { MaterialSymbol } from "material-symbols-react";
 import { cn } from "@/lib/utils";
 
 const Select = SelectPrimitive.Root;
