@@ -43,4 +43,4 @@ Refer to the [Google Material Symbols Documentation from Ravindra Marella](https
 
 Material Symbols are created by [Google](https://github.com/google/material-design-icons/blob/master/LICENSE).
 Ravindra Marella's NPM package of the Material Symbols is distributed with an [Apache 2.0 License](https://github.com/marella/material-symbols/blob/main/LICENSE)
-This package is distributed with an [MIT License](https://github.com/bwaldeva/app-ds/tree/main/packages/material-symbols-react/blob/main/LICENSE).
+This package is distributed with an [MIT License](https://github.com/bwaldeva/app-ds/blob/main/packages/material-symbols-react/LICENSE.txt).
