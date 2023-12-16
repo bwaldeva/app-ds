@@ -3,13 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  * {
     --font-sans: "Inter Variable";
-    --font-mono: "JetBrains Mono Variable";
-  }
-
-  .dark {
-    --font-sans: "Inter Variable";
+    --font-serif: "Crimson Pro Variable";
     --font-mono: "JetBrains Mono Variable";
   }
 }

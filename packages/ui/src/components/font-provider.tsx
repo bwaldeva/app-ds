@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Slot } from "@radix-ui/react-slot";
+import { Slot, type SlotProps } from "@radix-ui/react-slot";
 import "@fontsource-variable/inter";
+import "@fontsource-variable/crimson-pro";
 import "@fontsource-variable/jetbrains-mono";
 
-export interface FontProviderProps
-  extends React.ButtonHTMLAttributes<HTMLDivElement> {
+export interface FontProviderProps extends SlotProps {
   children: React.ReactNode;
 }
 
