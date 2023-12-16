@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
 import * as tailwindAnimate from "tailwindcss-animate";
 import sharedConfig from "@repo/tailwind-config";
 
@@ -17,6 +16,11 @@ const config: Pick<
       screens: {
         "2xl": "1400px",
       },
+    },
+    fontFamily: {
+      sans: ["var(--font-sans)", "sans-serif"],
+      serif: ["var(--font-serif)", "serif"],
+      mono: ["var(--font-mono)", "monospace"],
     },
     extend: {
       colors: {
@@ -58,10 +62,6 @@ const config: Pick<
         lg: `var(--radius)`,
         md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-        mono: ["var(--font-mono)", ...fontFamily.mono],
       },
       keyframes: {
         "accordion-down": {
