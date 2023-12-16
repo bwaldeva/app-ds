@@ -8,6 +8,20 @@
     ".": "./dist/index.js"
   },
   "license": "MIT",
+  "author": "Bryan Waldeva",
+  "description": "React component for Material Symbols",
+  "keywords": [
+    "material",
+    "design",
+    "symbols",
+    "react",
+    "component",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bwaldeva/app-ds/tree/main/packages/material-symbols-react"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json && tsc-alias",
     "dev": "tsc -p tsconfig.json -w && tsc-alias -w",
