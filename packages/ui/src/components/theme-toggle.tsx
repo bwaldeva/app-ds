@@ -1,6 +1,5 @@
 "use client";
 
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { MaterialSymbol } from "@/components/ui/material-symbols";
 
 export function ThemeToggle(): JSX.Element {
   const { setTheme } = useTheme();
@@ -17,8 +17,14 @@ export function ThemeToggle(): JSX.Element {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button size="icon" variant="outline">
-          <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <MaterialSymbol
+            className="h-[1.5rem] w-[1.5rem] scale-100 transition-all dark:scale-0"
+            symbol="light_mode"
+          />
+          <MaterialSymbol
+            className="absolute h-[1.5rem] w-[1.5rem] scale-0 transition-all dark:scale-100"
+            symbol="dark_mode"
+          />
           <span className="sr-only">Toggle Theme</span>
         </Button>
       </DropdownMenuTrigger>
