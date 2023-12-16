@@ -1,6 +1,6 @@
 {
   "name": "material-symbols-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "sideEffects": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -30,7 +30,6 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
-    "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "material-symbols": "^0.14.2"
   },
