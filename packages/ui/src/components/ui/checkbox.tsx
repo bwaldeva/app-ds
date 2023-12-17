@@ -22,7 +22,7 @@ const Checkbox = React.forwardRef<
         "app-flex app-items-center app-justify-center app-text-current"
       )}
     >
-      <MaterialSymbol className="app-h-4 app-w-4" symbol="check" />
+      <MaterialSymbol className="app-h-6 app-w-6" symbol="check" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ));

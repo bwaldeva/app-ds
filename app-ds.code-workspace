@@ -1,8 +1,18 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto"
+      }
+    ],
+    "tailwindCSS.experimental.configFile": {
+      "apps/docs/tailwind.config.ts": "apps/docs/**",
+      "packages/ui/src/styles/tailwindcss.config.ts": "packages/ui/**"
+    }
+  }
 }

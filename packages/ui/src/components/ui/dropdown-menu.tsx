@@ -33,7 +33,10 @@ const DropdownMenuSubTrigger = React.forwardRef<
     {...props}
   >
     {children}
-    <MaterialSymbol className="ml-auto h-4 w-4" symbol="chevron_right" />
+    <MaterialSymbol
+      className="app-ml-auto app-h-6 app-w-6"
+      symbol="chevron_right"
+    />
   </DropdownMenuPrimitive.SubTrigger>
 ));
 DropdownMenuSubTrigger.displayName =
@@ -107,7 +110,7 @@ const DropdownMenuCheckboxItem = React.forwardRef<
   >
     <span className="app-absolute app-left-2 app-flex app-h-3.5 app-w-3.5 app-items-center app-justify-center">
       <DropdownMenuPrimitive.ItemIndicator>
-        <MaterialSymbol className="app-h-4 app-w-4" symbol="check" />
+        <MaterialSymbol className="app-h-6 app-w-6" symbol="check" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
