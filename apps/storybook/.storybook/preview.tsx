@@ -1,8 +1,6 @@
 import * as React from "react";
 import { withThemeByClassName } from "@storybook/addon-themes";
-import { FontProvider } from "@app-ds/ui";
-
-import "@app-ds/ui/index.css";
+import { StyleProvider } from "@app-ds/ui";
 
 export const decorators = [
   withThemeByClassName({
@@ -13,8 +11,8 @@ export const decorators = [
     defaultTheme: "dark",
   }),
   (Story) => (
-    <FontProvider>
+    <StyleProvider>
       <Story />
-    </FontProvider>
+    </StyleProvider>
   ),
 ];

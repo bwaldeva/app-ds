@@ -3,16 +3,13 @@ import { Slot, type SlotProps } from "@radix-ui/react-slot";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/crimson-pro";
 import "@fontsource-variable/jetbrains-mono";
+import "@/styles/tailwind.css";
 
-export interface FontProviderProps extends SlotProps {
-  children: React.ReactNode;
-}
-
-const FontProvider = React.forwardRef<HTMLDivElement, FontProviderProps>(
+const StyleProvider = React.forwardRef<HTMLElement, SlotProps>(
   ({ ...props }, ref) => {
     return <Slot ref={ref} {...props} />;
   }
 );
-FontProvider.displayName = "FontProvider";
+StyleProvider.displayName = "StyleProvider";
 
-export { FontProvider };
+export { StyleProvider };

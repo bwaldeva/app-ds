@@ -7,13 +7,12 @@
   "exports": {
     ".": "./dist/index.js",
     "./client": "./dist/components/client.js",
-    "./server": "./dist/components/server.js",
-    "./index.css": "./dist/index.css"
+    "./server": "./dist/components/server.js"
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p tsconfig.json && tsc-alias && tailwindcss -c ./src/styles/tailwindcss.config.ts -i ./src/styles/tailwind.css -o dist/index.css && copy-and-watch ./assets/**/* ./dist/assets/",
-    "dev": " concurrently \"tsc -p tsconfig.json -w\" \"tsc-alias -w\" \"tailwindcss --watch -c ./src/styles/tailwindcss.config.ts -i ./src/styles/tailwind.css -o ./dist/index.css\" \"copy-and-watch --watch ./assets/**/* ./dist/assets/\"",
+    "build": "tsc -p tsconfig.json && tsc-alias && tailwindcss -c ./src/styles/tailwindcss.config.ts -i ./src/styles/tailwind.css -o ./dist/styles/tailwind.css && copy-and-watch ./assets/**/* ./dist/assets/",
+    "dev": " concurrently \"tsc -p tsconfig.json -w\" \"tsc-alias -w\" \"tailwindcss --watch -c ./src/styles/tailwindcss.config.ts -i ./src/styles/tailwind.css -o ./dist/styles/tailwind.css\" \"copy-and-watch --watch ./assets/**/* ./dist/assets/\"",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
