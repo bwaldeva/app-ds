@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import * as SwitchPrimitives from "@radix-ui/react-switch"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import * as SwitchPrimitives from "@radix-ui/react-switch";
+import { cn } from "@/lib/utils";
 
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
@@ -10,7 +10,7 @@ const Switch = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SwitchPrimitives.Root
     className={cn(
-      "peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
+      "app-peer app-inline-flex app-h-5 w-9 app-shrink-0 app-cursor-pointer app-items-center app-rounded-full app-border-2 app-border-transparent app-shadow-sm app-transition-colors focus-visible:app-outline-none focus-visible:app-ring-2 focus-visible:app-ring-ring focus-visible:app-ring-offset-2 focus-visible:app-ring-offset-background disabled:app-cursor-not-allowed disabled:app-opacity-50 data-[state=checked]:app-bg-primary data-[state=unchecked]:app-bg-input",
       className
     )}
     {...props}
@@ -18,11 +18,11 @@ const Switch = React.forwardRef<
   >
     <SwitchPrimitives.Thumb
       className={cn(
-        "pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0"
+        "app-pointer-events-none app-block app-h-4 app-w-4 app-rounded-full app-bg-background app-shadow-lg app-ring-0 app-transition-transform data-[state=checked]:app-translate-x-4 data-[state=unchecked]:app-translate-x-0"
       )}
     />
   </SwitchPrimitives.Root>
-))
-Switch.displayName = SwitchPrimitives.Root.displayName
+));
+Switch.displayName = SwitchPrimitives.Root.displayName;
 
-export { Switch }
+export { Switch };

@@ -6,6 +6,7 @@ const config: Pick<
   Config,
   "prefix" | "presets" | "content" | "darkMode" | "theme" | "plugins"
 > = {
+  prefix: "app-",
   presets: [sharedConfig],
   darkMode: ["class"],
   content: ["./src/**/*.{ts,tsx}"],

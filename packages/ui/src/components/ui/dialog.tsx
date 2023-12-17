@@ -19,7 +19,7 @@ const DialogOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
     className={cn(
-      "fixed inset-0 z-50 bg-background/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      "app-fixed app-inset-0 app-z-50 app-bg-background/80 app-backdrop-blur-sm data-[state=open]:app-animate-in data-[state=closed]:app-animate-out data-[state=closed]:app-fade-out-0 data-[state=open]:app-fade-in-0",
       className
     )}
     ref={ref}
@@ -36,16 +36,16 @@ const DialogContent = React.forwardRef<
     <DialogOverlay />
     <DialogPrimitive.Content
       className={cn(
-        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
+        "app-fixed app-left-[50%] app-top-[50%] app-z-50 app-grid app-w-full app-max-w-lg app-translate-x-[-50%] app-translate-y-[-50%] app-gap-4 app-border app-bg-background app-p-6 app-shadow-lg app-duration-200 data-[state=open]:app-animate-in data-[state=closed]:app-animate-out data-[state=closed]:app-fade-out-0 data-[state=open]:app-fade-in-0 data-[state=closed]:app-zoom-out-95 data-[state=open]:app-zoom-in-95 data-[state=closed]:app-slide-out-to-left-1/2 data-[state=closed]:app-slide-out-to-top-[48%] data-[state=open]:app-slide-in-from-left-1/2 data-[state=open]:app-slide-in-from-top-[48%] sm:app-rounded-lg",
         className
       )}
       ref={ref}
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+      <DialogPrimitive.Close className="app-absolute app-right-4 app-top-4 app-rounded-sm app-opacity-70 app-ring-offset-background app-transition-opacity hover:opacity-100 focus:app-outline-none focus:app-ring-2 focus:app-ring-ring focus:app-ring-offset-2 disabled:app-pointer-events-none data-[state=open]:app-bg-accent data-[state=open]:app-text-muted-foreground">
         <MaterialSymbol className="h-4 w-4" symbol="close" />
-        <span className="sr-only">Close</span>
+        <span className="app-sr-only">Close</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
@@ -59,7 +59,7 @@ function DialogHeader({
   return (
     <div
       className={cn(
-        "flex flex-col space-y-1.5 text-center sm:text-left",
+        "app-flex app-flex-col app-space-y-1.5 app-text-center sm:app-text-left",
         className
       )}
       {...props}
@@ -75,7 +75,7 @@ function DialogFooter({
   return (
     <div
       className={cn(
-        "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
+        "app-flex app-flex-col-reverse sm:app-flex-row sm:app-justify-end sm:app-space-x-2",
         className
       )}
       {...props}
@@ -90,7 +90,7 @@ const DialogTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
     className={cn(
-      "text-lg font-semibold leading-none tracking-tight",
+      "app-text-lg app-font-semibold app-leading-none app-tracking-tight",
       className
     )}
     ref={ref}
@@ -104,7 +104,7 @@ const DialogDescription = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn("app-text-sm app-text-muted-foreground", className)}
     ref={ref}
     {...props}
   />

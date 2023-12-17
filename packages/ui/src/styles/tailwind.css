@@ -34,7 +34,7 @@
     --radius: 0.5rem;
   }
 
-  .dark {
+  .app-dark {
     --background: 224 71.4% 4.1%;
     --foreground: 210 20% 98%;
     --card: 224 71.4% 4.1%;
@@ -59,9 +59,9 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply app-border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply app-bg-background app-text-foreground app-font-sans app-antialiased;
   }
 }

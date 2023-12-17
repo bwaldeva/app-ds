@@ -18,14 +18,14 @@ export function ThemeToggle(): JSX.Element {
       <DropdownMenuTrigger asChild>
         <Button size="icon" variant="outline">
           <MaterialSymbol
-            className="h-[1.5rem] w-[1.5rem] scale-100 transition-all dark:scale-0"
+            className="app-h-[1.5rem] app-w-[1.5rem] app-scale-100 app-transition-all dark:app-scale-0"
             symbol="light_mode"
           />
           <MaterialSymbol
-            className="absolute h-[1.5rem] w-[1.5rem] scale-0 transition-all dark:scale-100"
+            className="app-absolute app-h-[1.5rem] app-w-[1.5rem] app-scale-0 app-transition-all dark:app-scale-100"
             symbol="dark_mode"
           />
-          <span className="sr-only">Toggle Theme</span>
+          <span className="app-sr-only">Toggle Theme</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

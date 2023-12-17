@@ -31,19 +31,20 @@ export function ThemeProvider({
   useEffect(() => {
     const root = window.document.documentElement;
 
-    root.classList.remove("light", "dark");
+    root.classList.remove("app-light", "app-dark");
 
     if (theme === "system") {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
-        ? "dark"
-        : "light";
+        ? "app-dark"
+        : "app-light";
 
       root.classList.add(systemTheme);
-      return;
+    } else if (theme === "light") {
+      root.classList.add("app-light");
+    } else {
+      root.classList.add("app-dark");
     }
-
-    root.classList.add(theme);
   }, [theme]);
 
   const value = {
