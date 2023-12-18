@@ -5,12 +5,12 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export interface NavbarProps extends React.ComponentPropsWithRef<"div"> {
   brand?: React.ReactNode;
-  navigation?: React.ReactNode;
+  navItems?: React.ReactNode[];
   toolbar?: React.ReactNode;
 }
 
 const Navbar = React.forwardRef<HTMLDivElement, NavbarProps>(
-  ({ brand, navigation, toolbar, children, ...props }, ref) => {
+  ({ brand, navItems, toolbar, children, ...props }, ref) => {
     return (
       <div
         className="app-sticky app-z-50 app-top-0 app-h-16 app-px-3 app-bg-background dark:app-border app-shadow"
@@ -21,26 +21,32 @@ const Navbar = React.forwardRef<HTMLDivElement, NavbarProps>(
           <div className="app-flex app-h-full app-items-center">
             <div className="app-flex app-items-center">
               <Sheet>
-                <SheetTrigger asChild>
-                  <Button size="icon" variant="ghost">
-                    <MaterialSymbol symbol="menu" />
+                <SheetTrigger asChild className="md:app-hidden">
+                  <Button size="icon" variant="outline">
+                    <MaterialSymbol symbol="menu" weight={300} />
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left">
-                  <div className="app-grid app-gap-4 app-py-4">
-                    Hello, World!
-                  </div>
+                  {navItems ? (
+                    <div className="app-flex app-flex-col app-py-2 app-gap-2">
+                      {navItems}
+                    </div>
+                  ) : null}
                 </SheetContent>
               </Sheet>
             </div>
             {brand ? (
-              <div className="app-flex app-items-center app-pl-2">{brand}</div>
+              <div className="app-pl-2 app-flex app-items-center">{brand}</div>
             ) : null}
-            {navigation ? (
-              <nav className="app-flex app-items-center">{navigation}</nav>
+            {navItems ? (
+              <nav className="app-hidden app-px-2 app-mr-auto app-ml-auto md:app-flex md:app-items-center md:app-gap-4">
+                {navItems}
+              </nav>
             ) : null}
             {children ? (
-              <div className="app-flex app-items-center">{children}</div>
+              <div className="app-flex app-mr-auto app-ml-auto app-items-center app-gap-4">
+                {children}
+              </div>
             ) : null}
             {toolbar ? (
               <div className="app-flex app-ml-auto app-items-center app-justify-end">
